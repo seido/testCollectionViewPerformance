@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <collectionViewItem id="O2E-6a-kV5" customClass="CollectionViewItem" customModule="testCollectionViewPerformance" customModuleProvider="target">
+            <connections>
+                <outlet property="layerdImageView" destination="jdE-zF-RU1" id="tao-MK-2Ty"/>
+                <outlet property="textField" destination="xkN-lP-fY4" id="zq8-IY-MW9"/>
+                <outlet property="view" destination="DNt-um-HXN" id="Crf-Z2-Rk7"/>
+            </connections>
+        </collectionViewItem>
+        <view wantsLayer="YES" id="DNt-um-HXN">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="142"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkN-lP-fY4">
+                    <rect key="frame" x="7" y="7" width="171" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="oNK-n3-4k8">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-zF-RU1" customClass="LayerdImageView" customModule="testCollectionViewPerformance" customModuleProvider="target">
+                    <rect key="frame" x="9" y="32" width="167" height="102"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xkN-lP-fY4" firstAttribute="top" secondItem="jdE-zF-RU1" secondAttribute="bottom" constant="8" id="ALA-ve-JhE"/>
+                <constraint firstAttribute="trailing" secondItem="xkN-lP-fY4" secondAttribute="trailing" constant="8" id="D8T-ka-ggI"/>
+                <constraint firstItem="jdE-zF-RU1" firstAttribute="leading" secondItem="DNt-um-HXN" secondAttribute="leading" constant="9" id="GFH-bg-lsx"/>
+                <constraint firstItem="xkN-lP-fY4" firstAttribute="leading" secondItem="DNt-um-HXN" secondAttribute="leading" constant="9" id="PAJ-pk-iRq"/>
+                <constraint firstAttribute="bottom" secondItem="xkN-lP-fY4" secondAttribute="bottom" constant="7" id="W5O-iB-umq"/>
+                <constraint firstItem="jdE-zF-RU1" firstAttribute="top" secondItem="DNt-um-HXN" secondAttribute="top" constant="8" id="gLp-Cm-jrr"/>
+                <constraint firstAttribute="trailing" secondItem="jdE-zF-RU1" secondAttribute="trailing" constant="8" id="tPw-Wk-zWD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
